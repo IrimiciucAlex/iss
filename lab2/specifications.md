@@ -51,7 +51,7 @@ Administratorul poate vedea lista angajatilor firmei (dupa login).
 
 ### F3. Modificare date angajat
 
-Administratorii pot modifica informatiile unui angajat.
+Administratorii pot modifica informatiile unui angajat.(se face update si la salariu automat)
 
 Operatii disponibile:
 
