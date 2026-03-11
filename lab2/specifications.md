@@ -1,116 +1,154 @@
-EmployeeManager System - Project Specification
+# EmployeeManager System - Project Specification
 
-Project code : EMIA(EmployeeManager Irimiciuc Alex)
+**Project Code:** EMIA (EmployeeManager Irimiciuc Alex)
 
-Overview
+## Overview
 
-EmployeeManager este o aplicatie desktop dezvoltata pentru administrarea angajatilor unei companii.
+EmployeeManager este o aplicatie desktop dezvoltata pentru administrarea angajatilor unei companii.  
 Aplicatia permite managerilor sa gestioneze angajatii, sa monitorizeze activitatea acestora si sa calculeze salariile lunare.
+
 Sistemul este conceput pentru utilizare interna si ofera functionalitati pentru autentificarea administratorilor, gestionarea angajatilor, calcularea salariilor si evidenta absentelor.
 
-Scope
+---
+
+## Scope
 
 Acest proiect este o aplicatie universitara care implementeaza functionalitati esentiale pentru administrarea angajatilor unei firme.
+
 Aplicatia se concentreaza pe:
--autentificarea managerilor
--gestionarea angajatilor
--monitorizarea prezentei
--calcularea salariilor
--gestionarea bonusurilor si penalizarilor
+
+- autentificarea managerilor
+- gestionarea angajatilor
+- monitorizarea prezentei
+- calcularea salariilor
+- gestionarea bonusurilor si penalizarilor
+
 Nu include functionalitati FOARTE complexe.
 
-FEATURES
+---
 
-F1. Autentificarea administratorilor
+## Features
+
+### F1. Autentificarea administratorilor
+
 Administratorii trebuie sa se autentifice pentru a accesa aplicatia.
 
--login folosind username si parola
--parola este salvata folosind hash criptat
--posibilitatea de logout
--acces la functionalitatile aplicatiei doar dupa autentificare
+- login folosind username si parola
+- parola este salvata folosind hash criptat
+- posibilitatea de logout
+- acces la functionalitatile aplicatiei doar dupa autentificare
 
-F2. Vizualizarea angajatilor 
-Administratorul poate vedea lista angajatilor firmei. (dupa login)
--poibil sa existe filtrari(ex. dupa cine castiga mai mult,nume etc..) BUTON DE FILTRARE + SELECTIE FILTRU
+---
 
-F3.Modificare date angajat
+### F2. Vizualizarea angajatilor
+
+Administratorul poate vedea lista angajatilor firmei (dupa login).
+
+- posibil sa existe filtrari (ex. dupa cine castiga mai mult, nume etc.)
+- buton de filtrare + selectie filtru
+
+---
+
+### F3. Modificare date angajat
 
 Administratorii pot modifica informatiile unui angajat.
 
 Operatii disponibile:
--modificarea salariului pe zi
--modificarea functiei
 
-F4.Calcul salariu lunar
+- modificarea salariului pe zi
+- modificarea functiei
+
+---
+
+### F4. Calcul salariu lunar
 
 Aplicatia ofera functionalitatea de calcul automat al salariilor pentru luna curenta.
 
 Buton disponibil in aplicatie:
 
-"Calculeaza salarii pentru luna curenta"
+**"Calculeaza salarii pentru luna curenta"**
 
 Reguli de calcul:
-salariu lunar = salariu_pe_zi × zile_lucrate (INITIAL SALAITU ZI X CATE ZILE ARE LUNA)
-absentele reduc numarul de zile lucrate
-bonusurile cresc salariul final
-penalizarile scad salariul final
 
-F5.Detalii angajat 
+- salariu lunar = salariu_pe_zi × zile_lucrate  
+  (initial salariu_pe_zi × cate zile are luna)
+- absentele reduc numarul de zile lucrate
+- bonusurile cresc salariul final
+- penalizarile scad salariul final
+
+---
+
+### F5. Detalii angajat
 
 Cand un angajat este selectat din lista, aplicatia afiseaza detalii suplimentare despre acesta.
 
 Informatii afisate:
--salariu pe zi
--salariu maxim posibil in luna curenta
--numar zile lucrate
--numar zile absente
--calendar de prezenta lunar
+
+- salariu pe zi
+- salariu maxim posibil in luna curenta
+- numar zile lucrate
+- numar zile absente
+- calendar de prezenta lunar
+
 Aceasta sectiune permite managerului sa analizeze activitatea angajatului.
 
-F6.Bonusuri salariale
+---
+
+### F6. Bonusuri salariale
 
 Managerul poate adauga bonusuri.
+
 Functionalitate:
--introduce suma bonus
--apare alert/notificare(ex. "Esti sigur ca vrei sa acorzi bonus?")
--suma se adauga la salariul lunar
 
-OPTIONAL:
+- introduce suma bonus
+- apare alert/notificare (ex. "Esti sigur ca vrei sa acorzi bonus?")
+- suma se adauga la salariul lunar
 
-F7.Penalizari salariale
+---
+
+## Optional
+
+### F7. Penalizari salariale
+
 Managerul poate scadea bani din salariu.
+
 Functionalitate:
--introducere penalizare
--motiv optional
--suma se scade din salariu
 
-F8.Calendar prezenta angajat
+- introducere penalizare
+- motiv optional
+- suma se scade din salariu
+
+---
+
+### F8. Calendar prezenta angajat
+
 Pentru fiecare angajat exista un calendar lunar.
+
 Managerul poate:
--marca zile absente
--zilele absente reduc automat salariul
 
+- marca zile absente
+- zilele absente reduc automat salariul
 
-Non-Functional Requirements
+---
 
-Usability
+## Non-Functional Requirements
+
+### Usability
 
 Aplicatia trebuie sa aiba o interfata simpla si intuitiva pentru manageri.
 
-Data Integrity
+### Data Integrity
 
 Toate datele introduse trebuie validate pentru a preveni erori.
 
-Security
+### Security
 
 Parolele administratorilor trebuie stocate folosind functii de hash.
 
-Salary Accuracy
+### Salary Accuracy
 
 Calculul salariilor trebuie sa respecte regulile definite pentru absente, bonusuri si penalizari.
 
-Testing
+### Testing
 
 Trebuie implementate unit tests pentru validarea logicii de business.
-
-
