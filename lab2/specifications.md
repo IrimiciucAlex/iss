@@ -29,6 +29,10 @@ Nu include functionalitati FOARTE complexe.
 
 ## Features
 
+###F0. F0.Import Employees/Managers
+
+Import initial data via csv/json files
+
 ### F1. Autentificarea administratorilor
 
 Administratorii trebuie sa se autentifice pentru a accesa aplicatia.
