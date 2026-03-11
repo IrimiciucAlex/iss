@@ -29,9 +29,11 @@ Nu include functionalitati FOARTE complexe.
 
 ## Features
 
-###F0. F0.Import Employees/Managers
+### F0.Import Employees/Managers
 
 Import initial data via csv/json files
+
+---
 
 ### F1. Autentificarea administratorilor
 
