@@ -68,11 +68,15 @@ Operatii disponibile:
 
 ### F4. Calcul salariu lunar
 
+
 Aplicatia ofera functionalitatea de calcul automat al salariilor pentru luna curenta.
 
 Buton disponibil in aplicatie:
 
-**"Calculeaza salarii pentru luna curenta"**
+**"Calculeaza salarii pentru luna curenta"** 
+DAR NU VA FI NEVOIE DE EL MAJORITATEA TIMPULUI DEOARECE SE VA UPDATA AUTOMAT CAND SE FACE O MODIFICARE IN LISTA DE ANGAJATI DOAR DACA SE VREA O RECALUARE EXPLICITA
+
+-fiecare angajat va avea un nr de zile lucrate ex. 21 si asa se va calcula salariul
 
 Reguli de calcul:
 
