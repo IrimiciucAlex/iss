@@ -1,0 +1,66 @@
+.root {
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-background-color: #f4f7fa;
+}
+
+/* Butoane Moderne */
+.button {
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-transition: 0.3s;
+}
+
+.button-primary {
+    -fx-background-color: #3b82f6;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.button-primary:hover {
+    -fx-background-color: #2563eb;
+}
+
+.button-secondary {
+    -fx-background-color: white;
+    -fx-border-color: #e5e7eb;
+    -fx-border-radius: 8;
+    -fx-text-fill: #374151;
+}
+
+.button-danger {
+    -fx-background-color: #ef4444;
+    -fx-text-fill: white;
+}
+
+/* Carduri/Containere */
+.card {
+    -fx-background-color: white;
+    -fx-background-radius: 15;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5);
+}
+
+/* TextField-uri */
+.text-field {
+    -fx-background-radius: 8;
+    -fx-border-color: #e5e7eb;
+    -fx-border-radius: 8;
+    -fx-padding: 10;
+    -fx-background-color: white;
+}
+
+.text-field:focused {
+    -fx-border-color: #3b82f6;
+}
+
+/* Tabel */
+.table-view {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.table-view .column-header {
+    -fx-background-color: #f9fafb;
+    -fx-border-color: #e5e7eb;
+    -fx-padding: 10;
+}
+

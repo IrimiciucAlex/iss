@@ -1,0 +1,55 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.1.0'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Hibernate Core
+    implementation 'org.hibernate.orm:hibernate-core:6.4.4.Final'
+
+    // Driver SQLite
+    implementation 'org.xerial:sqlite-jdbc:3.45.1.0'
+
+    // Hibernate dialect pentru SQLite
+    implementation 'org.hibernate.orm:hibernate-community-dialects:6.4.4.Final'
+
+    // Logging (necesar pentru a vedea ce face Hibernate)
+    implementation 'org.apache.logging.log4j:log4j-core:2.20.0'
+    implementation 'org.apache.logging.log4j:log4j-api:2.20.0'
+    implementation 'org.slf4j:slf4j-simple:2.0.7'
+
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+
+
+    // JavaFX
+    implementation "org.openjfx:javafx-controls:21.0.4"
+    implementation "org.openjfx:javafx-fxml:21.0.4"
+}
+
+test {
+    useJUnitPlatform()
+}
+
+application {
+    mainClass = 'AppMain'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+javafx {
+    version = "21.0.4"
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
+}

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<HBox spacing="20" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="gui.MainController" stylesheets="@style.css" prefWidth="1150" prefHeight="750">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <VBox spacing="15" prefWidth="220" styleClass="card">
+        <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+        <Label text="Meniu Admin" style="-fx-font-weight: bold; -fx-font-size: 16;"/>
+        <Button text="Bonus" onAction="#handleBonus" maxWidth="Infinity" styleClass="button-primary"/>
+        <Button text="Penalizare" onAction="#handlePenalty" maxWidth="Infinity" styleClass="button-danger"/>
+        <Button text="Detalii Angajat" onAction="#handleViewDetails" maxWidth="Infinity" styleClass="button-secondary" style="-fx-border-color: #3b82f6;"/>
+        <Separator/>
+        <Button text="Logout" onAction="#handleLogout" maxWidth="Infinity" styleClass="button-secondary"/>
+    </VBox>
+
+    <VBox spacing="15" HBox.hgrow="ALWAYS" styleClass="card">
+        <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="Lista Angajati" style="-fx-font-size: 20; -fx-font-weight: bold;"/>
+            <Region HBox.hgrow="ALWAYS" />
+            <Button text="Importa Date" onAction="#handleImport" styleClass="button-primary"/>
+        </HBox>
+
+        <HBox spacing="10">
+            <TextField fx:id="searchField" promptText="Cauta dupa nume..." HBox.hgrow="ALWAYS" />
+            <ComboBox fx:id="sortComboBox" promptText="Sorteaza dupa..." prefWidth="180" />
+        </HBox>
+
+        <TableView fx:id="employeeTable" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="colName" text="Nume" prefWidth="180"/>
+                <TableColumn fx:id="colFunction" text="Functie" prefWidth="130"/>
+                <TableColumn fx:id="colMonth" text="Luna" prefWidth="100"/>
+                <TableColumn fx:id="colBaseSalary" text="Salariu/Zi" prefWidth="100"/>
+                <TableColumn fx:id="colFinalSalary" text="Salariu Luna (Final)" prefWidth="150"/>
+            </columns>
+        </TableView>
+
+        <HBox spacing="10" alignment="CENTER_LEFT" style="-fx-padding: 10; -fx-background-color: #f9fafb; -fx-background-radius: 10;">
+            <TextField fx:id="newNameField" promptText="Nume" prefWidth="150"/>
+            <TextField fx:id="newFunctionField" promptText="Functie" prefWidth="120"/>
+            <TextField fx:id="newSalaryField" promptText="Salariu/Zi" prefWidth="100"/>
+            <Button text="+ Adauga Angajat" onAction="#handleAddManual" styleClass="button-primary"/>
+        </HBox>
+    </VBox>
+</HBox>

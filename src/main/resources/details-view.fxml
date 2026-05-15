@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="20" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="gui.DetailsController" stylesheets="@style.css" styleClass="card" prefWidth="350">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <HBox alignment="CENTER_LEFT">
+        <Label text="Detalii angajat" style="-fx-font-size: 20; -fx-font-weight: bold;"/>
+        <Region HBox.hgrow="ALWAYS" />
+        <Button text="X" onAction="#handleClose" styleClass="button-secondary" style="-fx-background-radius: 20;"/>
+    </HBox>
+
+    <VBox spacing="10" style="-fx-background-color: #f9fafb; -fx-padding: 15; -fx-background-radius: 10;">
+        <HBox spacing="10">
+            <Label text="Nume:" style="-fx-font-weight: bold;"/>
+            <Label fx:id="nameLabel" text="---"/>
+        </HBox>
+        <HBox spacing="10">
+            <Label text="Functie:" style="-fx-font-weight: bold;"/>
+            <Label fx:id="functionLabel" text="---"/>
+        </HBox>
+        <HBox spacing="10">
+            <Label text="Salariu/Zi:" style="-fx-font-weight: bold;"/>
+            <Label fx:id="salaryLabel" text="---"/>
+        </HBox>
+    </VBox>
+
+    <GridPane hgap="10" vgap="10" alignment="CENTER">
+        <Button text="✎ Modifică" onAction="#handleEdit" maxWidth="Infinity" styleClass="button-primary" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <Button text="Exit" onAction="#handleClose" maxWidth="Infinity" styleClass="button-secondary" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+        <Button text="📅 Calendar" maxWidth="Infinity" styleClass="button-secondary" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <Button text="★ Bonus" onAction="#handleBonus" maxWidth="Infinity" styleClass="button-primary" style="-fx-background-color: #3b82f6;" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        <Button text="⚠ Penalizare" onAction="#handlePenalty" maxWidth="Infinity" styleClass="button-danger" GridPane.columnIndex="0" GridPane.rowIndex="2" GridPane.columnSpan="2"/>
+    </GridPane>
+</VBox>

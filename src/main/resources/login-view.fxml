@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="20" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="gui.LoginController" prefWidth="400" prefHeight="500" styleClass="card" stylesheets="@style.css">
+
+    <Label text="HRMS" style="-fx-font-size: 32; -fx-font-weight: bold; -fx-text-fill: #3b82f6;"/>
+    <Label text="Autentificare" style="-fx-font-size: 18; -fx-text-fill: #6b7280;"/>
+
+    <VBox spacing="10" maxWidth="300">
+        <TextField fx:id="usernameField" promptText="Utilizator" styleClass="text-field"/>
+        <PasswordField fx:id="passwordField" promptText="Parola" styleClass="text-field"/>
+    </VBox>
+
+    <VBox spacing="10" maxWidth="300">
+        <Button text="LOG IN" onAction="#handleLogin" maxWidth="Infinity" styleClass="button-primary" prefHeight="45"/>
+        <Button text="EXIT" onAction="#handleExit" maxWidth="Infinity" styleClass="button-secondary" prefHeight="45"/>
+    </VBox>
+
+    <Label text="© 2026 HRMS" style="-fx-font-size: 12; -fx-text-fill: #9ca3af;"/>
+</VBox>
